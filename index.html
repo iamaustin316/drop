@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DROP</title>
+    <link rel="stylesheet" href="resources/css/font-awesome.min.css">
+    <link rel="stylesheet" href="resources/css/app.css">
+</head>
+<body>
+<h1 class="section-title">DROP</h1>
+
+<div id="contents">
+    <ul class="option-list">
+        <li class="option-list__item">
+            <h2>Output Directory</h2>
+            <span class="output-dir"></span>
+            <button type="button" class="imagemin-output"><i class="fa fa-folder-open"></i> ...</button>
+        </li>
+
+        <li class="option-list__item">
+            <h2>JPG Quality</h2>
+            <select id="level-jpg" title="Select JPG Optimization Level">
+                <option value="90">90</option>
+                <option value="80" selected>80</option>
+                <option value="70">70</option>
+                <option value="60">60</option>
+                <option value="50">50</option>
+                <option value="40">40</option>
+            </select>
+        </li>
+
+        <li class="option-list__item">
+            <h2>PNG Quality</h2>
+            <select id="level-png" title="Select PNG Optimization Level">
+                <option value="90">90</option>
+                <option value="80" selected>80</option>
+                <option value="70">70</option>
+                <option value="60">60</option>
+                <option value="50">50</option>
+                <option value="40">40</option>
+            </select>
+        </li>
+
+        <li class="option-list__item">
+            <h2>GIF Quality</h2>
+            <select id="level-gif" title="Select GIF Optimization Level">
+                <option value="1" selected>3</option>
+                <option value="2">2</option>
+                <option value="3">1</option>
+            </select>
+        </li>
+    </ul>
+
+    <div class="drop-zone">
+        <i class="fa fa-download"></i>
+        <p class="drop-zone__tit">Drop files and folder</p>
+    </div>
+
+    <div class="debug"></div>
+</div>
+
+<script>
+	require(`${__dirname}/renderer-process/imagemin.js`);
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+	"name": "DROP",
+	"version": "1.0.0",
+	"description": "Image optimizer",
+	"author": "kyungtea Moon / demoon2016@ncsoft.com",
+	"main": "main.js",
+	"scripts": {
+		"start": "electron .",
+		"build": "npm run build:osx && npm run build:win64",
+		"build:osx": "build --mac",
+		"build:win64": "build --win --x64"
+	},
+	"build": {
+		"productName": "DROP",
+		"appId": "com.electron.drop",
+		"asar": false,
+		"buildDependenciesFromSource": true,
+		"mac": {
+			"target": [
+				"default"
+			]
+		},
+		"dmg": {
+			"title": "Drop"
+		},
+		"win": {
+			"target": [
+				"nsis"
+			],
+			"icon": "./resources/img/app.ico"
+		},
+		"nsis": {
+			"oneClick": false
+		},
+		"directories": {
+			"output": "dist/",
+			"app": "."
+		}
+	},
+	"dependencies": {
+		"imagemin": "^5.2.2",
+		"imagemin-gifsicle": "^5.1.0",
+		"imagemin-jpeg-recompress": "^5.1.0",
+		"imagemin-pngquant": "^5.0.0"
+	},
+	"devDependencies": {
+		"electron": "^1.6.11",
+		"electron-builder": "^19.16.2"
+	}
+}

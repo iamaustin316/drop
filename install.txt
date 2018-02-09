@@ -1,0 +1,5 @@
+1. HomeBrew 설치(https://brew.sh/)
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+2. brew install wine --without-x11
+3. brew install mono
